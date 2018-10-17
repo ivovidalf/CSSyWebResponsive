@@ -1,0 +1,205 @@
+/* Consideraciones Generales */
+
+html {
+	font-family: "Dancing Script", cursive;
+	background-color: #02010a;
+}
+
+.contenedor {
+	width: 900px;
+	margin: 0 auto;
+}
+
+@media (max-width:900px) {
+	.contenedor {
+		width: 100%;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	.imgSecundaria {
+		flex-direction: column;
+	}
+
+	footer {
+		flex-direction: column;
+		padding-left: 10%;
+
+	}
+
+	.galeria {
+		flex-direction: column;
+	}
+}
+
+img {
+	box-shadow: 2px 2px #02010a;
+}
+
+/* Cabecera */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #5b7989;
+	color: #fff;
+	border-radius: 10px 10px 0 0;
+	animation: slidein 1s;
+	transition: background 1s;
+}
+
+header h1 {
+	text-shadow: 2px 2px #02010a;
+	margin-left: 5%;
+}
+
+header li {
+	margin: 5px;
+	padding: 5px;
+	list-style-type: none;
+	display: inline;
+}
+
+li .actual {
+	text-decoration: none;
+}
+
+a, a:hover, a:focus {
+	color: #fff;
+}
+
+@-webkit-keyframes slidein{
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+
+}
+
+
+/* Imagen Central */
+
+.imgCentral {
+	display: flex;
+	justify-content: center;
+	background-color: #82c3a6;
+}
+
+.imgCentral img {
+	width: 100%;
+}
+
+/* Imagen Secundaria */
+
+.imgSecundaria {
+	display: flex;
+	justify-content: center;
+	background-color: #d5c75f;
+	border: 1px solid black;
+} 
+
+.imgSecundaria img {
+	width: 100%;
+}
+
+.imgSecundaria figcaption {
+	display: flex;
+	justify-content: center;
+}
+
+.paisaje:hover {
+	animation: paisaje 1s;
+	transition: background 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+@-webkit-keyframes paisaje{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(10deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	} 
+}
+
+.retrato:hover {
+	animation: retrato 1s;
+	transition: background 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+@-webkit-keyframes retrato{
+	0%{
+
+	}
+	50%{
+		transform: translate(5px, -20px);
+	}
+	100%{
+
+	}
+
+}
+
+/* Pie de página */
+
+footer {
+	display: flex;
+	justify-content: space-around;
+	border-radius: 0 0 10px 10px;
+	background-color: #C6d5c5;
+}
+
+footer h3{
+	display: flex;
+	justify-content: 
+}
+
+footer ul{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+footer li{
+	list-style-type: none;
+
+}
+
+/* Galeria */
+
+.galeria {
+	display: flex;
+	background-color: #d5c75f;
+}
+
+
+.galeria img {
+	width: 100%;
+}
+
+.uno {
+	-webkit-filter:blur(10px);
+	filter: blur(10px);
+}
+
+.dos, .cuatro, .seis {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.tres {
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
